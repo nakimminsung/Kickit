@@ -6,7 +6,8 @@ plugins {
 
 group = 'com.sideproject'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '17' // 프로젝트를 컴파일하는 자바의 최대 버전
+//targetCompatibility = '1.8' // 프로젝트를 컴파일하기 위한 최소 자바 버전
 
 configurations {
     compileOnly {
@@ -19,12 +20,20 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
+    // Spring Boot 관련
+    implementation 'org.springframework.boot:spring-boot-starter:3.0.4'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    compileOnly 'org.projectlombok:lombok'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools:3.0.4'
+
+    // Thymeleaf
+    implementation 'org.thymeleaf:thymeleaf:3.1.1.RELEASE'
+    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:3.2.0'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:3.0.4'
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+    annotationProcessor 'org.projectlombok:lombok:1.18.26'
 }
 
 tasks.named('test') {

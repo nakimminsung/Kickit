@@ -1,12 +1,12 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '3.0.5'
+    id 'org.springframework.boot' version '2.7.7'
     id 'io.spring.dependency-management' version '1.1.0'
 }
 
 group = 'com.sideproject'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17' // 프로젝트를 컴파일하는 자바의 최대 버전
+sourceCompatibility = '11' // 프로젝트를 컴파일하는 자바의 최대 버전
 //targetCompatibility = '1.8' // 프로젝트를 컴파일하기 위한 최소 자바 버전
 
 configurations {
@@ -21,15 +21,15 @@ repositories {
 
 dependencies {
     // Spring Boot 관련
-    implementation 'org.springframework.boot:spring-boot-starter:3.0.4'
+    implementation 'org.springframework.boot:spring-boot-starter:2.7.7'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools:3.0.4'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools:2.7.7'
 
     // Thymeleaf
     implementation 'org.thymeleaf:thymeleaf:3.1.1.RELEASE'
     implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:3.2.0'
-    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:3.0.4'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:2.7.7'
 
     // Lombok
     compileOnly 'org.projectlombok:lombok:1.18.26'

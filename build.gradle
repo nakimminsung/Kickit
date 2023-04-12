@@ -27,9 +27,13 @@ dependencies {
     developmentOnly 'org.springframework.boot:spring-boot-devtools:2.7.7'
 
     // Thymeleaf
-    implementation 'org.thymeleaf:thymeleaf:3.1.1.RELEASE'
-    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:3.2.0'
-    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:2.7.7'
+    // implementation 'org.thymeleaf:thymeleaf:3.1.1.RELEASE'
+    // implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:3.2.0'
+    // implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:2.7.7'
+    
+    // Thymeleaf 위에꺼 안되서 밑에 두줄 추가 - 민성 (2023.4.12)
+  	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect'
 
     // Lombok
     compileOnly 'org.projectlombok:lombok:1.18.26'
